@@ -62,6 +62,7 @@ LANGUAGE_CODE = 'en-um'
 # Taken from Django's default setting for LANGUAGES
 gettext_noop = lambda s: s
 LANGUAGES = (
+    ('en-um', gettext_noop('American English')),
     ('ar', gettext_noop('Arabic')),
     ('ca', gettext_noop('Catalan')),
     ('cs', gettext_noop('Czech')),
