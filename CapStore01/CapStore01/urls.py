@@ -13,9 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls import include, url
+from django.conf.urls.i18n import i18n_patterns
+from django.conf.urls.static import static
 from django.contrib import admin
+
 from oscar.app import application
+from oscar.views import handler500, handler404, handler403
+
+from apps.sitemaps import base_sitemaps
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
